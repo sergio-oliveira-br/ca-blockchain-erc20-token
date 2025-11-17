@@ -1,4 +1,14 @@
-node_modules/
+# Hardhat / Remix artifacts
 artifacts/
 cache/
+.deps/
+
+# Environment files
 .env
+
+# personal files
+*.docx
+
+# logs 
+*.log
+*.DS_Store
