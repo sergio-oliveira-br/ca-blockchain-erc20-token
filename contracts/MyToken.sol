@@ -4,10 +4,16 @@ pragma solidity ^0.8.20;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 
-contract CA200Tokens is ERC20, ERC20Permit {
+contract MyToken is ERC20, ERC20Permit {
 
-    constructor() ERC20("CA_BlockChain_200Tokens", "CA200TK") ERC20Permit("CA_BlockChain_200Tokens") {
+    constructor() ERC20("My200Tokens", "CA200TKS") ERC20Permit("My200Tokens") {
+
         uint256 initialSupply = 200;
-         _mint(msg.sender, initialSupply);
+        _mint(msg.sender, initialSupply);
+    }
+
+    // remove the decimals values
+    function decimals() public pure override returns (uint8) {
+    return 0;
     }
 }
